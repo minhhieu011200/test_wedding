@@ -1,7 +1,7 @@
 .bg-introduce {
     position: relative;
-    top: 30px;
-    width: 440px;
+    top: 40px;
+    width: 420px;
     height: 400px;
 }
 
@@ -28,6 +28,6 @@
 .bg-introduce .foreground {
     width: 350px;
     border-radius: 50%;
-    clip-path: circle(145px at 50% 50%);
+    clip-path: circle(153px at 50% 50%);
     animation-duration: 1.5s;
 }
