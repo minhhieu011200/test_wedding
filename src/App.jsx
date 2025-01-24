@@ -11,15 +11,37 @@ import GalleryImage from "./component/GalleryImage";
 import Greetings from "./component/Greetings";
 import Donate from "./component/Donate";
 import ThankYou from "./component/ThankYou";
+import Introduce from "./component/Introduce";
 
 function App() {
   const contentList = [
-    <CountDownTimer />,
-    <Invitation />,
-    <GalleryImage />,
-    <Greetings />,
-    <Donate />,
-    <ThankYou />,
+    {
+      title: '',
+      template: <Introduce />,
+      className: 'introduce'
+    },
+    {
+      title: 'Thư mời',
+      template: <Invitation />,
+    }, {
+      title: 'Album ảnh cưới',
+      template: <GalleryImage />,
+    },
+    {
+      title: 'Gửi lời chúc mừng',
+      template: <Greetings />,
+    },
+    {
+      title: 'Mừng cưới',
+      template: <Donate />,
+    },
+    {
+      title: '',
+      template: <ThankYou />,
+    },
+
+
+
   ];
   return (
     <>

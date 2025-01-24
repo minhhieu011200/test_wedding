@@ -9,7 +9,8 @@ export default function Greetings() {
     console.log("Failed:", errorInfo);
   };
   return (
-    <div className="">
+    <div className="p-4">
+
       <Form
         name="basic"
         // labelCol={{
@@ -19,8 +20,12 @@ export default function Greetings() {
         //   span: 16,
         // }}
         style={{
-          maxWidth: 300,
+          width: 350,
           margin: "auto",
+          boxShadow: 'rgba(17, 17, 26, 0.1) 0px 1px 3px, rgba(17, 17, 26, 0.1) 0px 2px 7px, rgba(17, 17, 26, 0.1) 0px 3px 10px',
+          borderRadius: "16px",
+          padding: "16px",
+          background: "#ffff"
         }}
         initialValues={{
           remember: true,
@@ -75,6 +80,7 @@ export default function Greetings() {
           </Button>
         </Form.Item>
       </Form>
+
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.content-count-down-heart {
+  position: relative;
+  margin-left: -12px;
+}
+
+.inside-heart {
+  font-family: 'Merriweather, serif';
+  position: absolute;
+  line-height: 1;
+  /* Định vị tuyệt đối bên trong biểu tượng */
+  top: 45%;
+  /* Căn giữa theo chiều dọc */
+  left: 50%;
+  /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%);
+  /* Đảm bảo căn giữa chính xác */
+  text-align: center;
+  /* Căn giữa văn bản */
+  color: #C14545;
+  /* Màu chữ nổi bật trên nền */
+  font-size: 14px;
+  font-weight: 700;
+}

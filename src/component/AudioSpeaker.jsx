@@ -28,7 +28,7 @@ const AudioSpeaker = () => {
                 style={{
                     position: "fixed",
                     bottom: "50px",
-                    left: "50px",
+                    left: "2%",
                     backgroundColor: "#df4758",
                     borderRadius: "50%",
                     boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
@@ -38,6 +38,7 @@ const AudioSpeaker = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    overflow: "hidden",
                 }}
                 onClick={toggleAudio}
             >

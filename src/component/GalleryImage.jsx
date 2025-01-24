@@ -6,6 +6,7 @@ import lgAutoplay from "lightgallery/plugins/autoplay";
 
 import lgRotate from "lightgallery/plugins/rotate";
 import fjGallery from "flickr-justified-gallery";
+import { Button } from "antd";
 
 export default function GalleryImage() {
   const lightGallery = useRef(null);
@@ -32,8 +33,7 @@ export default function GalleryImage() {
   };
 
   return (
-    <div className="text-center">
-      Album ảnh cưới
+    <div>
       <LightGallery
         onInit={onInit}
         mode="lg-fade"
@@ -42,6 +42,7 @@ export default function GalleryImage() {
         plugins={[lgZoom, lgThumbnail, lgAutoplay, lgRotate]}
         slideShowInterval={1500}
         dynamic={true}
+        zoom={true}
         dynamicEl={[
           {
             iframe: false,
@@ -141,15 +142,13 @@ export default function GalleryImage() {
           />
         </a>
       </LightGallery>
-      <button
-        type="button"
-        className="header__button btn-dynamic"
+      <Button
         onClick={() => {
           lightGallery.current.openGallery(0);
         }}
       >
-        See 15 photos
-      </button>
+        Xem thêm
+      </Button>
     </div>
   );
 }

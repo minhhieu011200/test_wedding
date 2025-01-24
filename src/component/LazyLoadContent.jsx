@@ -26,15 +26,24 @@ const LazyLoadContent = ({ content, index }) => {
     };
   }, []);
 
+
+
   return (
     <div
       ref={contentRef}
       style={{
         padding: "1rem",
-        backgroundColor: index % 2 === 0 ? "#ffff" : "#e0e0e0",
+        backgroundColor: index % 2 !== 0 ? "#ffff" : "rgb(250 250 250)",
       }}
+      className={content.className}
     >
-      {isVisible && <>{content}</>}
+      {isVisible &&
+        <div className="text-center">
+          {
+            content.title && <div className="title">{content.title}</div>
+          }
+          {content.template}
+        </div>}
     </div>
   );
 };

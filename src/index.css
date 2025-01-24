@@ -4,27 +4,148 @@
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-thumbnail.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-autoplay.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-rotate.css');
+
+#root {
+  /* box-sizing: border-box; */
+  overflow-x: hidden;
+  max-width: 1000px;
+  margin: auto;
+}
+
 body {
   margin: 0;
+
+  /* Ẩn cuộn ngang */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1,h2,h3,h4,p,h5,h6{
-  margin:0
-}
-iframe{
-  z-index: -1!important;
+
+
+@font-face {
+  font-family: "VkNVVNUSSUVEY";
+  src: url("https://w.ladicdn.com/5c728619c417ab07e5194baa/vnmusti-20240502171056-h3t4m.ttf") format("truetype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "VVRNIFppcmtvbidGY";
+  src: url("https://w.ladicdn.com/5c728619c417ab07e5194baa/utm-zirkon-20240502170726-nohzt.ttf") format("truetype");
 }
 
-.gallery__item{
-  position: relative!important;
+@font-face {
+  font-family: "aUNpZWwgUnVrbxhLmZg";
+  src: url("https://w.ladicdn.com/5c728619c417ab07e5194baa/iciel-rukola-20240502170249-4zlbb.otf")
+}
+
+@font-face {
+  font-family: "VVZOVGhVHUuVFRG";
+  src: url("https://w.ladicdn.com/5c728619c417ab07e5194baa/uvnthutu-20240502170827-bik9s.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VVRNIFNjcmlwdGluYSBLVCdGY";
+  src: url("https://w.ladicdn.com/5c728619c417ab07e5194baa/utm-scriptina-kt-20240502170712-jrn1y.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VVZORGluaEhvbiUVEY";
+  src: url("https://w.ladicdn.com/5c728619c417ab07e5194baa/uvndinhhon-20240502170745-gov6r.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VVZOTWpSGuZyUVEY";
+  src: url("https://w.ladicdn.com/5c728619c417ab07e5194baa/uvnmoihong-20240502170800-ouaqa.ttf") format("truetype");
+}
+
+.introduce {
+  background: url('./assets//img/bg-introduce-1.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 730px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+h5,
+h6 {
+  margin: 0;
+
+}
+
+iframe {
+  z-index: -1 !important;
+}
+
+.gallery__item {
+  position: relative !important;
   cursor: pointer;
+}
+
+.title {
+  font-family: "VVZOVGhVHUuVFRG";
+  font-weight: bold;
+  color: rgb(187, 106, 7);
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+}
+
+.custom-btn {
+  font-size: 13px;
+  width: 75px;
+  height: 30px;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #C14545;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.btn-15 {
+  background: #b86161;
+  border: none;
+  z-index: 1;
+}
+
+.btn-15:hover {
+  color: #fff;
+}
+
+.text-red {
+  color: #C14545;
+}
+
+.text-red-2 {
+  color: rgb(225, 79, 79);
 }

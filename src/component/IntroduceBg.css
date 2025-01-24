@@ -1,0 +1,33 @@
+.bg-introduce {
+    position: relative;
+    top: 30px;
+    width: 440px;
+    height: 400px;
+}
+
+.bg-introduce .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+
+.bg-introduce .foreground-wrapper {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    /* Canh giữa theo chiều dọc */
+    left: 50%;
+    /* Canh giữa theo chiều ngang */
+    transform: translate(-50%, -50%);
+    /* Đảm bảo vị trí cố định */
+}
+
+.bg-introduce .foreground {
+    width: 350px;
+    border-radius: 50%;
+    clip-path: circle(145px at 50% 50%);
+    animation-duration: 1.5s;
+}
