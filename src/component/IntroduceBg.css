@@ -1,8 +1,9 @@
 .bg-introduce {
     position: relative;
     top: 40px;
-    width: 420px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
+
 }
 
 .bg-introduce .background {
@@ -11,23 +12,21 @@
     object-fit: cover;
     position: relative;
     z-index: 2;
+    transform: rotate(10deg)
 }
 
 
 .bg-introduce .foreground-wrapper {
     z-index: 1;
     position: absolute;
-    top: 50%;
-    /* Canh giữa theo chiều dọc */
-    left: 50%;
-    /* Canh giữa theo chiều ngang */
+    top: 227px;
+    left: 212px;
     transform: translate(-50%, -50%);
-    /* Đảm bảo vị trí cố định */
 }
 
 .bg-introduce .foreground {
     width: 350px;
     border-radius: 50%;
-    clip-path: circle(153px at 50% 50%);
-    animation-duration: 1.5s;
+    clip-path: circle(158px at 50% 50%);
+    /* Hiệu ứng shake sẽ chạy mãi */
 }
