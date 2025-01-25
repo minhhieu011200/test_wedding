@@ -13,7 +13,7 @@ function IntroduceBg(props) {
             <div className="foreground-wrapper">
                 <div className='animate__animated animate__jackInTheBox'>
 
-                    <img className='foreground ' src={test} />
+                    <img className='foreground animate__animated animate__tada ' src={test} />
                 </div>
             </div>
 

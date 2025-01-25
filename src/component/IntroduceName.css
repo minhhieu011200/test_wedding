@@ -5,17 +5,5 @@
 }
 
 .heart-infinite {
-    animation: heartbeat 1.1s infinite;
-}
-
-@keyframes heartbeat {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
+    animation: heartBeat 3s infinite;
 }
