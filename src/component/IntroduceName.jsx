@@ -18,8 +18,11 @@ function IntroduceName(props) {
             <span>
                 Quỳnh Như
             </span>
-            <p style={{ fontFamily: 'Sail, cursive', fontSize: '20px', fontWeight: 550 }} >23-03-2025</p>
-        </div>
+            <div>
+
+                <p style={{ fontFamily: 'Dancing Script, serif', fontSize: '20px', fontWeight: 700, letterSpacing: '3px' }} >23 tháng 03, 2025</p>
+            </div>
+        </div >
     );
 }
 

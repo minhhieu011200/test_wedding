@@ -17,16 +17,18 @@
 
 
 .bg-introduce .foreground-wrapper {
-    z-index: 1;
+    z-index: 10;
     position: absolute;
     top: 227px;
     left: 212px;
     transform: translate(-50%, -50%);
+    clip-path: circle(158px at 50% 50%);
 }
 
 .bg-introduce .foreground {
     width: 350px;
     border-radius: 50%;
-    clip-path: circle(158px at 50% 50%);
+
+    animation-delay: 0.9s;
 
 }

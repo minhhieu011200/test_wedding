@@ -12,7 +12,7 @@ const LazyLoadContent = ({ content, index }) => {
           setIsVisible(true); // Set visibility to true when the content is in view
         }
       },
-      { threshold: 0.7 } // Trigger when 50% of the content is visible
+      { threshold: 0.9 } // Trigger when 50% of the content is visible
     );
 
     if (contentRef.current) {

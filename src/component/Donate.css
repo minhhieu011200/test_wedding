@@ -1,0 +1,7 @@
+.content-donate {
+    display: inline-block;
+    border-radius: 12px;
+    border: 1px dashed rgb(222, 222, 222);
+    padding: 10px;
+    animation-delay: 1.5s;
+}

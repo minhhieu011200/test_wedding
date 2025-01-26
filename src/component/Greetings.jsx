@@ -20,7 +20,7 @@ export default function Greetings() {
         //   span: 16,
         // }}
         style={{
-          width: 350,
+          maxWidth: 350,
           margin: "auto",
           boxShadow: 'rgba(17, 17, 26, 0.1) 0px 1px 3px, rgba(17, 17, 26, 0.1) 0px 2px 7px, rgba(17, 17, 26, 0.1) 0px 3px 10px',
           borderRadius: "16px",
