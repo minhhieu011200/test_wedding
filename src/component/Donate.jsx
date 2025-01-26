@@ -8,24 +8,6 @@ import bankQRHieu from '../assets/img/bankQR_Hieu.jpg'
 import bankQRNhu from '../assets/img/bankQR_Nhu.jpg'
 
 export default function Donate() {
-  const onDownload = () => {
-    const url = imageList[current];
-    const suffix = url.slice(url.lastIndexOf('.'));
-    const filename = Date.now() + suffix;
-
-    fetch(url)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const blobUrl = URL.createObjectURL(new Blob([blob]));
-        const link = document.createElement('a');
-        link.href = blobUrl;
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
-        URL.revokeObjectURL(blobUrl);
-        link.remove();
-      });
-  };
   const handleDownload = (img) => {
     const link = document.createElement('a');
     link.href = img; // Image URL
