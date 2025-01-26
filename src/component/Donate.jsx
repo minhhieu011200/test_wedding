@@ -1,11 +1,9 @@
 import React from "react";
 import { Button, Image, Typography } from 'antd';
-
-const { Text } = Typography;
-
 import './Donate.css'
 import bankQRHieu from '../assets/img/bankQR_Hieu.jpg'
 import bankQRNhu from '../assets/img/bankQR_Nhu.jpg'
+const { Text } = Typography;
 
 export default function Donate() {
   const handleDownload = (img) => {
