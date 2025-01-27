@@ -27,6 +27,10 @@ function App() {
       template: <GalleryImage />,
     },
     {
+      title: 'Video cưới',
+      template: <div>Coming soon</div>,
+    },
+    {
       title: 'Gửi lời chúc mừng',
       template: <Greetings />,
     },

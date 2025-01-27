@@ -59,6 +59,11 @@ body {
   src: url("https://w.ladicdn.com/5c728619c417ab07e5194baa/uvnmoihong-20240502170800-ouaqa.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "VVRNIFdlZGRpbmcgSyZULnRZg";
+  src: url("https://w.ladicdn.com/5c728619c417ab07e5194baa/utm-wedding-kt-20240502170713-kqjd8.ttf") format("truetype");
+}
+
 .introduce {
   background: url('./assets//img/test-2.jpg') no-repeat;
   /* background-size: cover; */

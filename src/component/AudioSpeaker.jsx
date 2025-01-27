@@ -3,7 +3,7 @@ import { ImVolumeHigh, ImVolumeMute2 } from "react-icons/im";
 import './AudioSpeaker.css'
 const AudioSpeaker = () => {
     const audioRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
     const buttonRef = useRef(null);
 
     useEffect(() => {
