@@ -22,17 +22,25 @@ function App() {
     {
       title: 'Thư mời',
       template: <Invitation />,
-    }, {
+    },
+    {
       title: 'Album ảnh cưới',
-      template: <GalleryImage />,
+      // template: <GalleryImage />,
+      template: <div>Coming soon</div>,
     },
     {
       title: 'Video cưới',
       template: <div>Coming soon</div>,
     },
     {
+      title: 'Thực đơn',
+      template: <div>Coming soon</div>,
+      // template: <Invitation />,
+    },
+    {
       title: 'Gửi lời chúc mừng',
       template: <Greetings />,
+      className: 'greetings'
     },
     {
       title: 'Mừng cưới',

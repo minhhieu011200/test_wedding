@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+// import bgTitle from '..//assets/img/bg-title.png';
 
 const LazyLoadContent = ({ content, index }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,7 +41,14 @@ const LazyLoadContent = ({ content, index }) => {
       {isVisible &&
         <div className="text-center">
           {
-            content.title && <div className="title">{content.title}</div>
+            content.title &&
+            <div className="title">
+              {/* <div>
+                <img src={bgTitle} />
+              </div> */}
+              <u>{content.title}
+              </u>
+            </div>
           }
           {content.template}
         </div>}
