@@ -11,7 +11,9 @@ import Greetings from "./component/Greetings";
 import Donate from "./component/Donate";
 import ThankYou from "./component/ThankYou";
 import Introduce from "./component/Introduce";
-
+import { ToastContainer } from "react-toastify";
+// import * as Toastify from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const contentList = [
     {
@@ -60,7 +62,7 @@ function App() {
         <LazyLoadContent key={index} content={content} index={index + 1} />
       ))}
       <HeartFall snowflakeImage="/img/heart.jpg" />
-
+      <ToastContainer position="bottom-right" theme="colored" autoClose={2000} />
       <AudioSpeaker />
     </>
   );

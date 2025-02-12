@@ -40,3 +40,29 @@
   color: #fff;
   text-decoration: none;
 }
+
+.greetings .ant-input-outlined {
+  background: #fff6f6;
+}
+
+.greetings .ant-input-outlined:hover,
+.greetings .ant-input-outlined:focus {
+  border-color: #ffc8c8;
+  box-shadow: 0 0 5px rgba(255, 200, 200, 0.5);
+}
+
+.greetings .ant-input-outlined::-webkit-input-placeholder {
+  color: gray;
+}
+
+.greetings .ant-input-outlined:-moz-placeholder {
+  color: gray;
+}
+
+.greetings .ant-input-outlined::-moz-placeholder {
+  color: gray;
+}
+
+.greetings .ant-input-outlined:-ms-input-placeholder {
+  color: gray;
+}
