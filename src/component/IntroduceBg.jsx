@@ -3,7 +3,6 @@ import test from '../assets/img/test.jpg';
 import bg_2 from '../assets/img/test.svg';
 
 import './IntroduceBg.css'
-import { Image } from 'antd';
 function IntroduceBg(props) {
     return (
         <div className='bg-introduce'>
@@ -12,7 +11,7 @@ function IntroduceBg(props) {
             <div className="foreground-wrapper">
                 <div className='animate__animated animate__jackInTheBox'>
 
-                    <Image className='foreground animate__animated animate__tada ' src={test} />
+                    <img className='foreground animate__animated animate__tada ' src='/img/prewedding/41b6e4e5a19900e580c3cab2d91ff1588ec8c3cf.jpg' />
                 </div>
             </div>
 
