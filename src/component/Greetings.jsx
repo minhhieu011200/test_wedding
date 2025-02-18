@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 export default function Greetings() {
   const onFinish = async (values) => {
 
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw8ecNFsAh0sJkbuK7fVhlYCtOP0IY01U80yKblMhZhmBpK8FFl8-76eXFyWBmqLZ0j/exec";
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxFJP0GzlRb58IovQg5Y-Cr60KylUg9KcfcrRLlfF4DqCac5NIUyM6bGb-FR_PXY6GY4Q/exec";
     try {
       await axios.post(GOOGLE_SCRIPT_URL, values);
       toast.success('Gửi thành công xin cảm ơn quý khách')
