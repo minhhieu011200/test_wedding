@@ -35,6 +35,7 @@ const LazyLoadContent = ({ content, index }) => {
       style={{
         padding: "1rem",
         backgroundColor: index % 2 !== 0 ? "#ffff" : "rgb(250 250 250)",
+        minHeight: "100px"
       }}
       className={content.className}
     >

@@ -28,17 +28,18 @@ function App() {
     {
       title: 'Album ảnh cưới',
       template: <GalleryImage />,
+      // className: 'gallery-image'
       // template: <div>Coming soon</div>,
     },
     {
       title: 'Video cưới',
       template: <div>Coming soon</div>,
     },
-    {
-      title: 'Thực đơn',
-      template: <div>Coming soon</div>,
-      // template: <Invitation />,
-    },
+    // {
+    //   title: 'Thực đơn',
+    //   template: <div>Coming soon</div>,
+    //   // template: <Invitation />,
+    // },
     {
       title: 'Gửi lời chúc mừng',
       template: <Greetings />,
@@ -51,6 +52,7 @@ function App() {
     {
       title: '',
       template: <ThankYou />,
+      className: 'thank-you'
     },
 
 

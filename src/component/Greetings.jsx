@@ -41,7 +41,7 @@ export default function Greetings() {
         layout="vertical"
         onFinish={onFinish}
         // onFinishFailed={onFinishFailed}
-        style={{ position: 'relative', top: 100, left: 27, width: 295, animationDelay: '1.7s' }}
+        style={{ position: 'relative', top: 130, left: 27, width: 295, animationDelay: '1.7s' }}
         autoComplete="off"
         form={form}
       // variant="borderless"
@@ -67,8 +67,8 @@ export default function Greetings() {
 
         <Form.Item name="confirm" label="Bạn sẽ đến chứ?" >
           <Radio.Group>
-            <Radio value="1">Có, tôi sẽ đến</Radio>
-            <Radio value="2">Xin lỗi, tôi bận mất rồi</Radio>
+            <Radio value="1">Tôi sẽ đến</Radio>
+            <Radio value="2">Xin lỗi. Tôi bận mất rồi</Radio>
           </Radio.Group>
         </Form.Item>
 
@@ -101,7 +101,7 @@ export default function Greetings() {
         </Form.Item>
 
         <Form.Item style={{ textAlign: '-webkit-center' }}>
-          <button htmlType="submit" className="btn-grad">
+          <button className="btn-grad">
             Gửi
           </button>
         </Form.Item>

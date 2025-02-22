@@ -1,0 +1,15 @@
+.fj-gallery {
+  --webkit-column-count: 2;
+  --moz-column-count: 2;
+  column-count: 2;
+  /* padding: 0 6px; */
+  column-width: 33%;
+  gap: 5px
+}
+
+.fj-gallery img {
+  width: 100%;
+  /* --webkit-transition: all 350ms ease;
+  transition: all 1s ease; */
+  cursor: pointer;
+}

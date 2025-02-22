@@ -1,9 +1,9 @@
 import LightGallery from "lightgallery/react";
 import React, { useCallback, useEffect, useRef } from "react";
+import './GalleryImage.css'
 import lgZoom from "lightgallery/plugins/zoom";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgAutoplay from "lightgallery/plugins/autoplay";
-
 import lgRotate from "lightgallery/plugins/rotate";
 import fjGallery from "flickr-justified-gallery";
 import { Button } from "antd";
@@ -64,17 +64,19 @@ export default function GalleryImage() {
     fjGallery(document.querySelectorAll(".fj-gallery"), {
       itemSelector: ".fj-gallery-item",
       rowHeight: "100%",
-      // maxRowsCount: 3,
+      maxRowsCount: 3,
       lastRow: "start",
-      // gutter: 2,
-      // rowHeightTolerance: 0.1,
-      // calculateItemsHeight: false,
+      gutter: 2,
+      rowHeightTolerance: 0.1,
+      calculateItemsHeight: false,
     });
   }, []);
 
   const onOpen = (index) => {
     lightGallery.current.openGallery(index);
   };
+
+
 
   return (
     <div>
@@ -87,6 +89,8 @@ export default function GalleryImage() {
         slideShowInterval={1500}
         dynamic={true}
         zoom={true}
+        download={true}
+
         dynamicEl={
           imageUrls.map((imageUrl) => {
             return {
@@ -94,26 +98,87 @@ export default function GalleryImage() {
               thumb: imageUrl,
               downloadUrl: imageUrl,
               src: imageUrl,
-              download: imageUrl
+              download: imageUrl,
             }
           })
         }
       >
-        <a
-          style={{ position: "relative" }}
-          onClick={() => onOpen(0)}
-          data-lg-size="1600-1067"
-          className="gallery__item fj-gallery-item"
-          data-index="0"
-          data-src="https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80"
-          data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@tobbes_rd' >Tobias Rademacher </a></h4><p> Location - <a href='https://unsplash.com/s/photos/puezgruppe%2C-wolkenstein-in-gr%C3%B6den%2C-s%C3%BCdtirol%2C-italien'>Puezgruppe, Wolkenstein in Gröden, Südtirol, Italien</a>layers of blue.</p>"
-        >
-          <img
-            alt="layers of blue."
-            className="img-responsive"
-            src="https://images.unsplash.com/photo-1609342122563-a43ac8917a3a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=240&q=80"
-          />
-        </a>
+        <img
+          onClick={() => onOpen(1)}
+          src={imageUrls[1]}
+          className="animate__animated animate__fadeInLeft"
+        />
+        <img
+          onClick={() => onOpen(10)}
+          src={imageUrls[10]}
+          className="animate__animated animate__fadeInLeft"
+        />
+        <img
+          onClick={() => onOpen(3)}
+          src={imageUrls[3]}
+          className="animate__animated animate__fadeInLeft"
+        />
+
+        <img
+          onClick={() => onOpen(23)}
+          src={imageUrls[23]}
+          className="animate__animated animate__fadeIn"
+          style={{ animationDelay: '2s' }}
+        />
+
+
+        <img
+          onClick={() => onOpen(24)}
+          src={imageUrls[24]}
+          className="animate__animated animate__fadeIn"
+          style={{ animationDelay: '2.5s' }}
+        />
+
+        <img
+          onClick={() => onOpen(30)}
+          src={imageUrls[30]}
+          className="animate__animated animate__fadeInUp"
+          style={{ animationDelay: '3.5s' }}
+        />
+        <img
+          onClick={() => onOpen(9)}
+          src={imageUrls[9]}
+          className="animate__animated animate__fadeInRight"
+        />
+        <img
+          onClick={() => onOpen(13)}
+          src={imageUrls[13]}
+          className="animate__animated animate__fadeInRight"
+        />
+
+        <img
+          onClick={() => onOpen(17)}
+          src={imageUrls[17]}
+          className="animate__animated animate__fadeIn"
+          style={{ animationDelay: '2s' }}
+        />
+        <img
+          onClick={() => onOpen(34)}
+          src={imageUrls[34]}
+          className="animate__animated animate__fadeIn"
+          style={{ animationDelay: '2s' }}
+        />
+        <img
+          onClick={() => onOpen(32)}
+          src={imageUrls[32]}
+          className="animate__animated animate__fadeIn"
+          style={{ animationDelay: '2.5s' }}
+        />
+        <img
+          onClick={() => onOpen(33)}
+          src={imageUrls[33]}
+          className="animate__animated animate__fadeInUp"
+          style={{ animationDelay: '3.5s' }}
+        />
+
+
+
+
       </LightGallery>
       <Button
         onClick={() => {

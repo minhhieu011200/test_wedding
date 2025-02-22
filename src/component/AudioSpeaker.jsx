@@ -4,12 +4,21 @@ import './AudioSpeaker.css'
 const AudioSpeaker = () => {
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(true);
-    const buttonRef = useRef(null);
 
     useEffect(() => {
-        if (buttonRef.current) {
-            buttonRef.current.click(); // Programmatically trigger the click event
-        }
+        const playAudio = () => {
+            if (audioRef.current) {
+                audioRef.current.play().catch(error => {
+                    console.log("Trình duyệt chặn autoplay:", error);
+                });
+            }
+        };
+
+        document.addEventListener("click", playAudio, { once: true });
+
+        return () => {
+            document.removeEventListener("click", playAudio);
+        };
     }, []);
 
     const toggleAudio = () => {
@@ -44,7 +53,7 @@ const AudioSpeaker = () => {
             >
 
 
-                <audio ref={audioRef} autoPlay>
+                <audio ref={audioRef} autoPlay={true}>
                     <source src="/audio/EmDongYIDo-DucPhucx911-9034315.mp3" type="audio/mp3" />
                 </audio>
 
