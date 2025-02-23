@@ -6,16 +6,21 @@ import axios from "axios";
 import { toast } from "react-toastify";
 export default function Greetings() {
   const onFinish = async (values) => {
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz0_RDiQL7ec7-fKz0PIPFEJosqmccVlDSmXTFIzLkjYxH1_C2DefucZzL0aaK0s2pjuQ/exec"
 
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxFJP0GzlRb58IovQg5Y-Cr60KylUg9KcfcrRLlfF4DqCac5NIUyM6bGb-FR_PXY6GY4Q/exec";
-    try {
-      await axios.post(GOOGLE_SCRIPT_URL, values);
-      toast.success('Gửi thành công xin cảm ơn quý khách')
-    } catch (error) {
-      console.log('Error sheet', error)
-      toast.error('Lỗi khi gửi dữ liệu!')
-    }
-  };
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(values),
+    });
+    toast.success("Gửi thành công, xin cảm ơn quý khách!");
+
+    form.resetFields()
+  }
+
+
+
   const [form] = Form.useForm();
 
   return (
