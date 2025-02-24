@@ -12,12 +12,12 @@
     object-fit: cover;
     position: relative;
     z-index: 2;
-    transform: rotate(10deg)
+    /* transform: rotate(10deg) */
 }
 
 
 .bg-introduce .foreground-wrapper {
-    z-index: 10;
+    z-index: 1;
     position: absolute;
     top: 227px;
     left: 212px;
@@ -26,7 +26,7 @@
 }
 
 .bg-introduce .foreground {
-    width: 350px;
+    width: 300px;
     border-radius: 50%;
 
     animation-delay: 0.9s;
