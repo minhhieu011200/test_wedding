@@ -14,6 +14,7 @@ import Introduce from "./component/Introduce";
 import { ToastContainer } from "react-toastify";
 // import * as Toastify from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Video from "./component/Video";
 function App() {
   const contentList = [
     {
@@ -33,7 +34,7 @@ function App() {
     },
     {
       title: 'Video cưới',
-      template: <div>Coming soon</div>,
+      template: <Video />
     },
     // {
     //   title: 'Thực đơn',

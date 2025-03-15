@@ -1,13 +1,15 @@
-import React from "react";
-import { Form, Input, Radio } from "antd";
+import React, { useState } from "react";
+import { Button, Form, Input, Radio } from "antd";
 import bgGreeting from '../assets/img/bg-greeting.jpg'
 import './Greetings.css'
-import axios from "axios";
 import { toast } from "react-toastify";
 export default function Greetings() {
-  const onFinish = async (values) => {
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz0_RDiQL7ec7-fKz0PIPFEJosqmccVlDSmXTFIzLkjYxH1_C2DefucZzL0aaK0s2pjuQ/exec"
+  const [loading, setLoading] = useState(false)
 
+  const onFinish = async (values) => {
+    console.log('22222222222222222222222')
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz0_RDiQL7ec7-fKz0PIPFEJosqmccVlDSmXTFIzLkjYxH1_C2DefucZzL0aaK0s2pjuQ/exec"
+    setLoading(true)
     await fetch(GOOGLE_SCRIPT_URL, {
       method: "POST",
       mode: "no-cors",
@@ -15,7 +17,7 @@ export default function Greetings() {
       body: JSON.stringify(values),
     });
     toast.success("Gửi thành công, xin cảm ơn quý khách!");
-
+    setLoading(false)
     form.resetFields()
   }
 
@@ -106,9 +108,9 @@ export default function Greetings() {
         </Form.Item>
 
         <Form.Item style={{ textAlign: '-webkit-center' }}>
-          <button className="btn-grad">
-            Gửi
-          </button>
+          <Button className={`btn-grad`} htmlType="submit" loading={loading}>
+            {loading ? "Đang gửi..." : "Gửi"}
+          </Button>
         </Form.Item>
       </Form>
 

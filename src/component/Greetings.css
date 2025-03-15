@@ -17,7 +17,7 @@
 
 
 .btn-grad {
-  background-image: linear-gradient(to right, #D66D75 0%, #E29587 51%, #D66D75 100%)
+  background-image: linear-gradient(to right, #D66D75 0%, #E29587 51%, #D66D75 100%) !important
 }
 
 .btn-grad {
@@ -35,10 +35,10 @@
 }
 
 .btn-grad:hover {
-  background-position: right center;
+  background-position: right center !important;
   /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 .greetings .ant-input-outlined {
@@ -47,8 +47,8 @@
 
 .greetings .ant-input-outlined:hover,
 .greetings .ant-input-outlined:focus {
-  border-color: #ffc8c8;
-  box-shadow: 0 0 5px rgba(255, 200, 200, 0.5);
+  border-color: #ffc8c8 !important;
+  box-shadow: 0 0 5px rgba(255, 200, 200, 0.5) !important;
 }
 
 .greetings .ant-input-outlined::-webkit-input-placeholder {
@@ -65,4 +65,9 @@
 
 .greetings .ant-input-outlined:-ms-input-placeholder {
   color: gray;
+}
+
+
+.greetings .ant-btn {
+  height: 36px
 }

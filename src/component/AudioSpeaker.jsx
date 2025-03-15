@@ -48,6 +48,7 @@ const AudioSpeaker = () => {
                     justifyContent: "center",
                     alignItems: "center",
                     overflow: "hidden",
+                    zIndex: 1
                 }}
                 onClick={toggleAudio}
             >
